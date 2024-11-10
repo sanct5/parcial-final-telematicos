@@ -11,10 +11,12 @@ RUN echo "installing webapp on apache2 with ssl"
 RUN cp -r . /var/www/webapp
 RUN cp apache-selfsigned.crt /etc/ssl/certs
 RUN cp apache-selfsigned.key /etc/ssl/private
+RUN cp apache2.conf /etc/apache2
 RUN cp 000-default.conf /etc/apache2/sites-available
 RUN apt install libapache2-mod-wsgi-py3 -y
 RUN a2enmod ssl
 RUN a2enmod wsgi
+RUN a2enmod rewrite
 RUN cd /etc/apache2/sites-available
 RUN a2ensite 000-default.conf
 CMD ["apachectl", "-D", "FOREGROUND"]
