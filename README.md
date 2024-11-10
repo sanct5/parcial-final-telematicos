@@ -13,11 +13,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes com
 
 Para ejecutar el servidor web seguro, sigue estos pasos:
 
-1. Clona el repositorio en tu máquina local:
-    ```bash
-    git clone https://github.com/usuario/proyecto-final-telematicos.git
-    cd proyecto-final-telematicos
-    ```
+1. Clona el repositorio en tu máquina local
 
 2. Inicia la máquina virtual con **Vagrant**:
     ```bash
