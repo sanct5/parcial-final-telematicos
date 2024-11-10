@@ -24,6 +24,15 @@ Para ejecutar el servidor web seguro, sigue estos pasos:
    - **Apache** con SSL y el servidor web en **Flask**.
    - **MySQL** como base de datos del servidor web.
 
+3. Podrás acceder con ssh a cualquiera de los dos contenedores:
+    ```bash
+    sudo docker exec -it dockerwebapp-webapp-1 /bin/bash
+    ```
+
+    ```bash
+    sudo docker exec -it dockerwebapp-db-1 /bin/bash
+    ```
+
 ## Acceso al Servidor
 
 Una vez que la máquina virtual esté en funcionamiento, podrás acceder al servidor web desde tu navegador escribiendo:
@@ -33,13 +42,3 @@ https://192.168.50.2
 ```
 
 > ⚠️ **Nota:** Si intentas acceder a través de una conexión no segura (`http`), serás redireccionado automáticamente a la versión segura (`https`).
-
-Podrás acceder con ssh a cualquiera de los dos contenedores escribiendo:
-
-```bash
-sudo docker exec -it dockerwebapp-webapp-1 /bin/bash
-```
-
-```bash
-sudo docker exec -it dockerwebapp-db-1 /bin/bash
-```
