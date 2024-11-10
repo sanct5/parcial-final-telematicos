@@ -30,5 +30,6 @@ Una vez que la máquina virtual esté en funcionamiento, podrás acceder al serv
 
 ```bash
 https://192.168.50.2
+```
 
 > ⚠️ **Nota:** Si intentas acceder a través de una conexión no segura (`http`), serás redireccionado automáticamente a la versión segura (`https`).
