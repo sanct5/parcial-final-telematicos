@@ -23,9 +23,6 @@ Para ejecutar el servidor web seguro, sigue estos pasos:
    Esto aprovisionará automáticamente la máquina virtual, instalará Docker y montará los contenedores necesarios:
    - **Apache** con SSL y el servidor web en **Flask**.
    - **MySQL** como base de datos del servidor web.
-   - **Prometheus** para monitoreo de métricas.
-   - **Node Exporter** para recopilar métricas del servidor.
-   - **Grafana** para visualizar las métricas.
 
 3. Podrás acceder con ssh a cualquiera de los dos contenedores:
     ```bash
