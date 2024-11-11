@@ -66,7 +66,7 @@ Una vez iniciado el proyecto, puedes acceder a los siguientes servicios:
   http://192.168.50.2:3000
   ```
   
-## Información sobre métricas principales
+## Información sobre métricas
 
 - **Uso de CPU (node_cpu_seconds_total)**:  
   Esta métrica muestra el tiempo total que la CPU ha estado en diferentes modos, como user, system, idle, etc., en segundos. Cada modo indica una actividad específica:
@@ -87,6 +87,16 @@ Una vez iniciado el proyecto, puedes acceder a los siguientes servicios:
 - **Espacio en disco (node_filesystem_avail_bytes)**:
   Indica el espacio de almacenamiento disponible en bytes en el sistema de archivos. Es importante para monitorear el uso de disco y evitar que el sistema quede sin espacio, lo cual podría causar la falla de  aplicaciones y procesos críticos. Por ejemplo, monitorear el espacio en disco permite prever cuándo un sistema está por alcanzar su capacidad máxima, de modo que se pueda limpiar, archivar o agregar almacenamiento antes de que surjan problemas.
 
-![image](https://github.com/user-attachments/assets/3266850f-dbbd-495b-8358-fbf53f0ce35b)
+  ![image](https://github.com/user-attachments/assets/3266850f-dbbd-495b-8358-fbf53f0ce35b)
 
+## Dashboards en Grafana
+
+En Grafana, es posible visualizar métricas recolectadas de los sistemas en tiempo real. A continuación, se presentan ejemplos de paneles configurados:
+
+- Panel con métricas como el uso de CPU y la memoria disponible, incluyendo un medidor de estado (gauge) que muestra el espacio en disco disponible. Esta configuración permite monitorear el estado de los recursos de forma intuitiva y detallada.
+
+  ![image](https://github.com/user-attachments/assets/5e23d44b-8828-4acf-8afa-730110f2ef1a)
   
+- Panel completo de **Node Exporter Full** en Grafana, que muestra un conjunto más amplio de métricas recolectadas por el Node Exporter, facilitando un análisis exhaustivo de los recursos del sistema.
+
+  ![image](https://github.com/user-attachments/assets/a59606de-9c25-4567-a1a0-679453e137a5)
