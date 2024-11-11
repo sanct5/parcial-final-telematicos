@@ -50,17 +50,23 @@ Una vez iniciado el proyecto, puedes acceder a los siguientes servicios:
 
 - **Prometheus**:
   Interfaz de Prometheus para consultar las métricas recolectadas de los servidores y aplicaciones.
-  [http://192.168.50.2:9090](http://192.168.50.2:9090)  
-
+  ```bash
+  http://192.168.50.2:9090
+  ```
 - **Node Exporter**:
   Proporciona métricas del sistema host, como uso de CPU, memoria, disco, y red.
-  [http://192.168.50.2:9100/metrics](http://192.168.50.2:9100/metrics)  
+  ```bash
+  http://192.168.50.2:9100/metrics
+  ```
+
 
 - **Grafana**:
   Visualización gráfica de las métricas. Las credenciales iniciales para ingresar son generalmente **admin/admin** (deberías cambiarlas en el primer acceso).
-  [http://192.168.50.2:3000](http://192.168.50.2:3000)  
-
-### Información sobre métricas principales
+  ```bash
+  http://192.168.50.2:3000
+  ```
+  
+## Información sobre métricas principales
 
 - **Uso de CPU (node_cpu_seconds_total)**:  
   Esta métrica muestra el tiempo total que la CPU ha estado en diferentes modos, como user, system, idle, etc., en segundos. Cada modo indica una actividad específica:
@@ -73,9 +79,14 @@ Una vez iniciado el proyecto, puedes acceder a los siguientes servicios:
 
   ![image](https://github.com/user-attachments/assets/bce7c7f3-47b9-48c8-84fa-1bb383228864)
 
-
 - **Memoria disponible (node_memory_MemAvailable_bytes)**:  
   Representa la cantidad de memoria libre y fácilmente disponible para nuevas aplicaciones sin necesidad de paginación. En sistemas con mucha actividad, esta métrica es crucial para evaluar si hay suficiente memoria disponible para satisfacer las demandas de las aplicaciones sin recurrir al intercambio de datos al disco, que es una operación más lenta. Si esta métrica disminuye constantemente, podría ser necesario optimizar los procesos o aumentar la memoria física.
 
+  ![image](https://github.com/user-attachments/assets/c55d1815-d78c-4989-b976-79e99cff601a)
+
 - **Espacio en disco (node_filesystem_avail_bytes)**:
   Indica el espacio de almacenamiento disponible en bytes en el sistema de archivos. Es importante para monitorear el uso de disco y evitar que el sistema quede sin espacio, lo cual podría causar la falla de  aplicaciones y procesos críticos. Por ejemplo, monitorear el espacio en disco permite prever cuándo un sistema está por alcanzar su capacidad máxima, de modo que se pueda limpiar, archivar o agregar almacenamiento antes de que surjan problemas.
+
+![image](https://github.com/user-attachments/assets/3266850f-dbbd-495b-8358-fbf53f0ce35b)
+
+  
